@@ -1,0 +1,12 @@
+<h1>Bienvenue aux chiffres et aux lettres </h1>
+
+<form action="/score">
+   <% @grid.each do |letter| %>
+     <%= letter %>
+   <% end %>
+
+   <input type="text" placeholder="guess the longest word" name="attempt">
+   <input type="hidden" name="grid" value=" <%= @grid.join()%>">
+  <input type="submit" value="Go, time's running ">
+
+</form>
